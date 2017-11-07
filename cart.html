@@ -1,0 +1,251 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Delivery Form</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/dropdown.css" />
+	
+	<style>
+	
+	.quantity input { 
+		width: 50px; 
+		text-align: center;
+	}
+	.quantity { 
+		padding-left: 100px;
+	}
+	#minus, #plus {
+		width: 20px;
+	}
+	.size {
+		color: #86939E;
+	}
+	table { 
+		border: 1px solid #BFE9FC; 
+		-webkit-border-radius: 10px; 
+		-moz-border-radius: 10px; 
+		border-radius: 10px; 
+		border-spacing: 0px;
+		
+	}
+	tfoot{ 
+		text-align: right; 
+		line-height: 1.8; 
+	}
+	table th, table td { 
+		border-top: 1px solid #BFE9FC; 
+	}
+	th:first-child { 
+		border-top: none; 
+	}
+	tr { 
+		height: 120px; 
+	}
+	.product-img { 
+		width: 170px; 
+	}
+	.product-img img { 
+		width: 120px; 
+		height: 80px; 
+	}
+	.item { 
+		width: 150px;
+	}
+	.quantity { 
+		width: 130px; 
+	}
+	.delete { 
+		width: 70px; 
+		padding-left: 20px;
+	}
+	.item-price { 
+		width: 200px; 
+		text-align: right; 
+		padding-right: 30px;
+	}
+	.item-price input { 
+		width: 70px; 
+		text-align: center; 
+	}
+	.head { 
+		height: 60px; 
+		text-align: left; 
+	}
+	
+	.footer-description { 
+		padding-right: 30px; 
+	}
+	.footer-title { 
+		font-weight: bold; 
+	}
+	.title { 
+		padding-left: 20px; 
+	}
+	.footer-description input { 
+		width: 70px; 
+		text-align:center; 
+	}
+	.shopping-cart {
+		display: table;
+		margin: 3% 0 5% 19%;
+		box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.10);
+		border-radius: 10px;
+
+	}
+	
+	.checkout { 
+		padding-bottom: 9%;
+		
+	}
+	.checkout button { 
+		width: 200px; 
+		height: 40px; 
+		border: 2px solid;  
+		border-radius: 7px; 
+		float: center; 
+		background-color: #ffffff; 
+		border-color: #BFE9FC; 
+		box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.10)
+	}
+	.checkout a { 
+		color: #42A4FA;
+		font-weight: bolder;
+		font-size: 18px;
+		letter-spacing: 3px;
+	}
+ 
+</style>
+	
+</head>
+<body>
+
+<img src="img/Running-Wallpaper-005.jpg" alt="running" id = "bg" />
+
+<div id= "title">
+<div class="nav-wrapper-new">
+<ul><li><a href="index.html" class="navcss">Home</a></li>
+  <li>
+    <a class = "navcss" onclick="void(0)">
+    Shop
+</a>
+    <ul>
+    <a class="shopTitle">Football</a>
+    <li><a href="jersey.html">Jersey</a></li>
+      <li><a href="shoes.html">Shoes</a></li>
+	  <li><a href="accessories.html">Accessories</a></li>
+     <a class="shopTitle">Running Shoes</a>
+    	<li><a href="maleRunningShoes.html">Male</a></li>
+    	<li><a href="femaleRunningShoes.html">Female</a></li>
+     <a class="shopTitle">Training</a>
+    	<li><a href="trainingmen.html">Men</a></li>
+    	<li><a href="trainingwomen.html">Women</a></li>
+	 
+	
+    </ul>
+  </li>
+  <li><a href="contact.html" class="navcss">Contact</a></li>
+</ul>
+</div>
+
+<div class="allItems">
+<img src="img/logo.png" alt="logo" id="logo" />
+
+<div class = "whitespace">
+
+<h1 class="itemTitle">Cart</h1>
+<!-- Cart -->
+   <div class="shopping-cart">
+      <table id="cart">
+		<thead>
+		<tr class="head">
+			<th colspan="5"> <div class="title">Your Shopping Cart</div></th>
+		</tr>
+		</thead>
+		<tr id="row1">
+			<td class="delete"><button type="button" onclick="dltRow('row1')">delete</button></td>
+			<td class="product-img"><img src="img/nbtrack.jpg" alt=""></td>
+			<td class="item">New Balance<br>Tracksuit<br><span class="size">M</span></td>
+			<td class="quantity">
+				<button type="button" onclick="plus()">+</button>
+				<input type="text" min="1" id="qty" value="1" onchange="quantity('row1')">
+				<button type="button" onclick="minus()">-</button>
+			</td>
+			<td class="item-price"><label>RM </label><input type="text" value="170.55" onchange="totalPrice('row1')"></td>
+		</tr>
+		<tr id="row2">
+			<td class="delete"><button type="button" onclick="dltRow('row2')">delete</button></td>
+			<td class="product-img"><img src="img/FS9.jpg" alt=""></td>
+			<td class="item">Nike<br>Mercurial Vitory<br><span class="size">uk9</span></td>
+			<td class="quantity">
+				<button type="button" onclick="plus()">+</button>
+				<input type="text" min="1" id="qty" value="1" onchange="quantity('row2')">
+				<button type="button" onclick="minus()">-</button>
+			</td>
+			<td class="item-price"><label>RM </label><input type="text" value="397.20" onchange="totalPrice('row2')"></td>
+		</tr>
+		<tr id="row3">
+			<td class="delete"><button type="button" onclick="dltRow('row3')">delete</button></td>
+			<td class="product-img"><img src="img/keepinggloves.jpg" alt=""></td>
+			<td class="item">Adidas<br>Goal Keeper Gloves<br><span class="size">OSFM</span></td>
+			<td class="quantity">
+				<button type="button" onclick="plus()">+</button>
+				<input type="text" min="1" id="qty" value="1" onchange="quantity('row3')">
+				<button type="button" onclick="minus()">-</button>
+			</td>
+			<td class="item-price"><label>RM </label><input type="text" id="price" value="50.00"  onchange="totalPrice('row3')"></td>
+		</tr>
+		<tfoot>
+		<tr>
+			<td colspan="4" class="footer-title">Shipping Fee: <br>Subtotal: </th>
+			<td class="footer-description">FREE <br><input type="text" id="total" value="0" onchange="calculateTotal()"></td>
+		</tr>
+		</tfoot>
+	  </table>
+	  
+	  
+	  <script>
+	  
+	var x = document.getElementById('qty');
+	var y = document.getElementById(id);
+
+
+function dltRow(y) {
+        document.getElementById(y).style.display = 'none';
+
+}
+
+function plus() {
+	var z = parseInt(x.value) + 1;
+	document.getElementById('qty').value = z;
+	return z;
+}
+
+function minus() {
+if (x.value > 1) {
+	var z = parseInt(x.value) - 1;
+		document.getElementById('qty').value = z;
+	}
+	return z;
+}
+
+function totalPrice(y) {
+	var p = document.getElementById('price').value;
+	plus();
+	minus();
+	
+	document.getElementById('price').value = p * z;
+}
+
+
+		
+	</script>
+	
+	
+</div>
+	<div class="checkout"><button><a href="deliveryForm.html">CHECKOUT</a></button></div>
+</div>
+</div>
+</div>
+</body>
+<html>

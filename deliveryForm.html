@@ -1,0 +1,149 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Delivery Form</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/dropdown.css" />
+	
+	<style>
+	#delivery-form {
+		margin: 3% 0 9% 21%;
+		border: 1px solid #BFE9FC;
+		height: 500px;
+		width: 800px;
+		font-size: 15px;
+		background-color: rgba(47, 201, 252, 0.07);
+		border-radius: 20px;
+	
+	}
+	
+	form {
+		line-height: 1.5em;
+		text-align: left;
+		padding: 20px;
+	}
+	.address {
+		width: 550px;
+	}
+	
+	select {
+		color: rgba(94, 105, 109, 0.60);
+		font-size: 15px;
+		width: 150px;
+	}
+	
+	option:not(:first-of-type) {
+		color: black;
+	}
+	
+	input {
+		font-size: 15px;
+	}
+	
+	::-webkit-input-placeholder { 
+		color: rgba(94, 105, 109, 0.30);
+	}
+	:-moz-placeholder { 
+		color: rgba(94, 105, 109, 0.30);
+	}
+	::-moz-placeholder { 
+		color: rgba(94, 105, 109, 0.30);
+	}
+	:-ms-input-placeholder { 
+		color: rgba(94, 105, 109, 0.30);
+	}
+	::-ms-input-placeholder { 
+		color: rgba(94, 105, 109, 0.30);
+	}
+	</style>
+	
+</head>
+<body>
+
+<img src="img/Running-Wallpaper-005.jpg" alt="running" id = "bg" />
+
+<div id= "title">
+<div class="nav-wrapper-new">
+<ul><li><a href="index.html" class="navcss">Home</a></li>
+  <li>
+    <a class = "navcss" onclick="void(0)">
+    Shop
+</a>
+    <ul>
+    <a class="shopTitle">Football</a>
+    <li><a href="jersey.html">Jersey</a></li>
+      <li><a href="shoes.html">Shoes</a></li>
+	  <li><a href="accessories.html">Accessories</a></li>
+     <a class="shopTitle">Running Shoes</a>
+    	<li><a href="maleRunningShoes.html">Male</a></li>
+    	<li><a href="femaleRunningShoes.html">Female</a></li>
+     <a class="shopTitle">Training</a>
+    	<li><a href="trainingmen.html">Men</a></li>
+    	<li><a href="trainingwomen.html">Women</a></li>
+	 
+	
+    </ul>
+  </li>
+  <li><a href="contact.html" class="navcss">Contact</a></li>
+</ul>
+</div>
+
+<div class="allItems">
+<img src="img/logo.png" alt="logo" id="logo" />
+
+<div class = "whitespace">
+
+<h1 class="itemTitle">Delivery Form</h1>
+<div id="delivery-form">
+
+<form action="welcome.php" method="post">
+Name: <input type="text" name="fname" id="fname" placeholder="First Name*">&nbsp
+Email: <input type="text" name="lname" id="lname" placeholder="Last Name*"><br><br>
+Address: <input type="text" name="email" id="email" placeholder="you@example.com"><br><br>
+Phone Number: <select size="1" name="prefix" id="prefix">
+<option>010</option>
+<option>011</option>
+<option>012</option>
+<option>013</option>
+<option>014</option>
+<option>015</option>
+<option>016</option>
+<option>017</option>
+<option>018</option>
+<option>019</option>
+</select> -
+<span> <input type="text" name="phoneno" id="tel" placeholder="1234567"></span><br><br>
+Company: <input type="text" name="company" id="company" placeholder="Company Name"><br><br>
+Address: <input type="text" name="address" class="address" placeholder="Address Line 1"><br><br>
+<input type="text" name="address" class="address" placeholder="Address Line 2"><br><br>
+<input type="text" name="address" class="address" placeholder="Address Line 3"><br><br>
+<select size="1" name="state" id="state">
+<option value="" disabled selected hidden>State</option>
+<option>Johor</option>
+<option>Kedah</option>
+<option>Kelantan</option>
+<option>Kuala Lumpur</option>
+<option>Labuan</option>
+<option>Melaka</option>
+<option>Negeri Sembilan</option>
+<option>Pahang</option>
+<option>Perak</option>
+<option>Perlis</option>
+<option>Pulau Pinang</option>
+<option>Sabah</option>
+<option>Sarawak</option>
+<option>Selangor</option>
+<option>Terengganu</option>
+</select> &nbsp
+<input type="text" name="city" id="city" placeholder="City*"> &nbsp
+<input type="text" name="postalcode" id="postalcode" placeholder="Zip Code*"><br><br> 
+<input type="checkbox" value="yes">Use this as billing address<br><br>
+<input type="submit" value="Save & Continue">
+</form> 
+	</div>
+</div>
+</div>
+</div>
+</body>
+<html>

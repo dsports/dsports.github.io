@@ -5,6 +5,17 @@
 	<title>Contact US</title>
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/dropdown.css" />
+	
+	<style>
+		fieldset {
+			border: 2px solid #BFE9FC
+		}
+		
+		#submit-button {
+			margin-bottom: 50px;
+		}
+	</style>
+	
 </head>
 <body>
 
@@ -46,21 +57,21 @@
 	<div id="contact">
 	Please contact us if you have any questions or encountered any problems when shopping with us.</div><br><br>
 	
-	<fieldset style="width: 25%; border: 2px ridge #ff0000; padding: 10px; margin-bottom: 10px; display: inline-block; vertical-align: top bottom">
+	<fieldset style="width: 25%; padding: 10px; margin-bottom: 10px; display: inline-block; vertical-align: top bottom">
 	<b>EMAIL: </b><a href="mailto:admin@xxxx.com">admin@xxxx.com </a><br>
 	(We will reply to your inquiries within 2 working days)<br><br>
 	</fieldset>
-	<fieldset style="width: 25%; border: 2px ridge #ff0000; padding: 10px; margin-bottom: 10px; display: inline-block; vertical-align: top">
+	<fieldset style="width: 25%; padding: 10px; margin-bottom: 10px; display: inline-block; vertical-align: top">
 	<b>PHONE: </b><br /><a href="tel:0312345678">03-12345678</a><br>
 	MON - FRI (Except public holiday): 9.00AM - 6.00PM<br><br><br>
 	</fieldset>
-	<fieldset style="width: 25%; border: 2px ridge #ff0000; padding: 10px; margin-bottom: 10px; display: inline-block; vertical-align: top">
+	<fieldset style="width: 25%; padding: 10px; margin-bottom: 10px; display: inline-block; vertical-align: top">
 	<b>ADDRESS: </b><br>5, Jalan Universiti, Bandar Sunway, <br>47500 Subang Jaya,<br>Selangor, Malaysia. 
 	</fieldset>
 	</div>
 	<br><br>
 	<form method ="get">
-	<fieldset style="width: 90%; border: 2px ridge #ff0000; padding: 10px; margin-bottom: 10px;">
+	<fieldset style="width: 70%; margin-left: 14%; margin-bottom: 30px;">
 	<legend align="center" style="font-weight:bold">CONTACT CUSTOMER SERVICE</legend>
 	<label>Name: <input type="text" name="name" id="name"></label><br><br>
 	<label>Email: <input type="text" name="email" id="email"></label><br>
@@ -83,9 +94,11 @@
 	<label>Subject: <input type="text" name="subject" id="subject"></label><br><br>
 	<label>Message: </label><br>
 	<textarea name="message" id="message" rows="4" col="40" style="width:50%">Enter your message here: </textarea><br><br>
-	<input type="submit" value="Send"> 
-	
 	</fieldset>
+	</form>
+	<div id="submit-button">
+	<input type="submit" value="Send"> 
+	</div>
 </div>
 	</div>
 </div>
