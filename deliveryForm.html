@@ -8,7 +8,6 @@
 	
 	<style>
 	#delivery-form {
-		margin: 3% 0 9% 21%;
 		border: 1px solid #BFE9FC;
 		height: 500px;
 		width: 800px;
@@ -16,6 +15,11 @@
 		background-color: rgba(47, 201, 252, 0.07);
 		border-radius: 20px;
 	
+	}
+	
+	#page {
+		padding: 3% 0 9% 29%;
+		
 	}
 	
 	form {
@@ -95,12 +99,13 @@
 <div class = "whitespace">
 
 <h1 class="itemTitle">Delivery Form</h1>
+<div id="page">
 <div id="delivery-form">
 
 <form action="welcome.php" method="post">
 Name: <input type="text" name="fname" id="fname" placeholder="First Name*">&nbsp
-Email: <input type="text" name="lname" id="lname" placeholder="Last Name*"><br><br>
-Address: <input type="text" name="email" id="email" placeholder="you@example.com"><br><br>
+<input type="text" name="lname" id="lname" placeholder="Last Name*"><br><br>
+Email: <input type="text" name="email" id="email" placeholder="you@example.com"><br><br>
 Phone Number: <select size="1" name="prefix" id="prefix">
 <option>010</option>
 <option>011</option>
@@ -142,6 +147,7 @@ Address: <input type="text" name="address" class="address" placeholder="Address 
 <input type="submit" value="Save & Continue">
 </form> 
 	</div>
+</div>
 </div>
 </div>
 </div>
