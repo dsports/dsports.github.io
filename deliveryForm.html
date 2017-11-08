@@ -18,7 +18,9 @@
 	}
 	
 	#page {
-		padding: 3% 0 9% 29%;
+		padding: 50px 0 100px 550px;
+		
+	
 		
 	}
 	
@@ -144,12 +146,19 @@ Address: <input type="text" name="address" class="address" placeholder="Address 
 <input type="text" name="city" id="city" placeholder="City*"> &nbsp
 <input type="text" name="postalcode" id="postalcode" placeholder="Zip Code*"><br><br> 
 <input type="checkbox" value="yes">Use this as billing address<br><br>
-<input type="submit" value="Save & Continue">
+<a href="index.html"><input type="button" value="Save & Continue" onclick="done()"> </a>
 </form> 
 	</div>
 </div>
 </div>
 </div>
 </div>
+
+<script>
+function done() {
+	alert("Congratulation! Your order is successful!");
+}
+
+</script>
 </body>
 <html>
