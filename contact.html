@@ -8,17 +8,44 @@
 	
 	<style>
 		fieldset {
-			border: 2px solid #BFE9FC
+			border: 2px solid #BFE9FC;
+			border-radius: 20px;
 		}
 		
-		#submit-button {
-			margin-bottom: 50px;
+		#container {
+			display: flex;
+			margin-left: 11.5%;
 		}
+		
+		#container fieldset {
+			margin: 2%;
+			text-align: center;
+			line-height: 20px;
+			padding-bottom: 1%;
+		}
+		
+		#contact-form #submit-button {
+			width: 70%;
+			cursor: pointer;
+			margin-left: 15%;
+			margin-bottom:2%;
+			border: 2px solid #BFE9FC; 
+			border-radius: 7px; 
+			background-color: white;
+			color: #42A4FA;
+			font-weight: bolder;
+			font-size: 18px;
+			font-family: Arial, san-serif;
+			letter-spacing: 3px;
+			padding: .5em;
+		}
+
 		
 		.phoneNo, .email {
 			color: #004FF9;
 			font-size: 15px;
 			letter-spacing: .2em;
+			width: 200px;
 		}
 		
 		.phoneNo:hover {
@@ -30,18 +57,87 @@
 		}
 		
 		.address {
-			font-size: 15px;
+			font-size: 14px;
 			letter-spacing: .1em;
 			color: #004FF9;
+			width: 200px;
 		}
 		
 		.address:hover {
 			color: #ff0000
 		}
 		
-		input {
-		margin-bottom: 10px;
+		.half {
+			margin-bottom: 1em;
+			padding-top: 2%;
+			display: inline-block;
+			margin: 1%;
+		}		
+		
+		.left {
+			float: left;
+			width: 40%;
+			padding-left: 5%;
 		}
+		
+		.right {
+			float: right;
+			width: 45%;
+			padding-left: 5%;
+		}
+
+		#contact-form input, textarea {
+			border:0; outline:0;
+			padding: 1em;
+			border-radius: 8px;
+			display: block;
+			width: 85%;
+			font-family: 'Times New Roman', sans-serif;
+			font-size: 15px;
+			background-color: #f1f1f1;
+			
+		}
+		
+		#contact-form {
+			text-align: left;
+			padding-bottom: 5%;
+			width: 80%;
+			padding-left: 12%;
+		}
+		
+		label {
+			font-size: 15px;
+		}
+		
+		.items {
+			width: 50%; 
+			padding: 2%; 
+			margin-bottom: 10px; 
+
+		}
+		
+		legend {
+			font-size: 15px;
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
+		
+	 select {
+		color: rgba(94, 105, 109, 0.60);
+		font-size: 15px;
+		width: 85%
+	}
+
+	.half span {
+		font-size: 12px;
+	}
+	
+	#message {
+		margin-left: 3%;
+		width: 93%;
+
+	}
+
 	</style>
 	
 </head>
@@ -84,34 +180,45 @@
 	<h2>We want your experience with us to be worry-free!</h2>
 	<div id="contact">
 	Please contact us if you have any questions or encountered any problems when shopping with us.</div><br><br>
-	
-	<fieldset style="width: 25%; padding: 10px; margin-bottom: 10px; display: inline-block; vertical-align: top bottom">
-	<b>EMAIL: </b><br><br><a href="mailto:admin@xxxx.com" class="email">admin@xxxx.com </a><br>
+		</div>
+	<div id="container">
+	<fieldset>
+	<b>EMAIL: </b><br><br><a href="mailto:admin@xxxx.com" class="email" title=" Send an email now?">admin@xxxx.com </a><br>
 	(We will reply to your inquiries within 2 working days)<br><br>
 	</fieldset>
-	<fieldset style="width: 25%; padding: 10px; margin-bottom: 10px; display: inline-block; vertical-align: top">
-	<b>PHONE: </b><br /><br><a href="tel:0312345678" class="phoneNo">03-12345678</a><br>
-	MON - FRI (Except public holiday): 9.00AM - 6.00PM<br><br><br>
+	<fieldset>
+	<b>PHONE: </b><br><br><a href="tel:0312345678" class="phoneNo" title="Call now?">03-12345678</a><br>
+	MON - FRI (Except public holiday): 9.00AM - 6.00PM<br><br>
 	</fieldset>
-	<fieldset style="width: 25%; padding: 10px; margin-bottom: 10px; display: inline-block; vertical-align: top">
-	<b>ADDRESS: </b><br><br><a href="https://www.google.com/maps/dir//Sunway+University,+Jalan+Universiti,+Bandar+Sunway,+Subang+Jaya,+Selangor/@3.0671557,101.5688707,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x31cc4c8f5912644b:0x77612fa0225cad69!2m2!1d101.6038902!2d3.0671563" class="address">5, Jalan Universiti, Bandar Sunway, <br>47500 Subang Jaya,<br>Selangor, Malaysia.</a> 
+	<fieldset>
+	<b>ADDRESS: </b><br><br><a href="https://www.google.com/maps/dir//Sunway+University,+Jalan+Universiti,+Bandar+Sunway,+Subang+Jaya,+Selangor/@3.0671557,101.5688707,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x31cc4c8f5912644b:0x77612fa0225cad69!2m2!1d101.6038902!2d3.0671563" class="address" title="Need a map?">
+	5, Jalan Universiti, Bandar Sunway, <br>47500 Subang Jaya,<br>Selangor, Malaysia.</a> 
 	</fieldset>
 	</div>
 	<br><br>
+	<div id="contact-form">
 	<form method ="get">
-	<fieldset style="width: 70%; margin-left: 14%; margin-bottom: 30px;">
-	<legend align="center" style="font-weight:bold">CONTACT CUSTOMER SERVICE</legend>
-	<label>Name: <input type="text" name="name" id="name"></label><br><br>
-	<label>Email: <input type="text" name="email" id="email"></label><br>
-	<span style="font-size:.75em"><sup>*</sup>Please ensure that your email address is correct so that we can respond to your enquiry.<br></span><br>
+	<fieldset>
+	<legend align="center" class="form-title">CONTACT CUSTOMER SERVICE</legend>
+	
+	<div class="half left">
+	<input type="text" name="name" id="name" placeholder="First Name"><br>
+	<input type="text" name="email" id="email" placeholder="Email"><br>
+
 	<label>Contact Preferences: &nbsp </label><select size="1" name="preference" id="preference">
-	<option>--Contact Preferences--</option>
+	<option value="" disabled selected hidden>--Contact Preference--</option>
 	<option>I prefer to be contacted through phone calls.</option>
 	<option>I prefer to be contacted through text.</option>
 	<option>I prefer to be contacted through email.</option>
 	</select><br><br>
+	
+	 </div>
+	 
+  <div class="half right">
+	<input type="text" name="name" id="name" placeholder="Last Name"><br>
+	<input type="text" name="phone" id="phone" placeholder="Phone"><br>
 	<label>Type of Query: &nbsp </label><select size="1" name="querytype" id="querytype">
-	<option>--What's your concern?--</option>
+	<option value="" disabled selected hidden>--What's Your Concern?--</option>
 	<option>How to Shop</option>
 	<option>Order Related Concerns</option>
 	<option>Shipping Options</option>
@@ -119,16 +226,25 @@
 	<option>Returns</option>
 	<option>Others</option>
 	</select><br><br>
-	<label>Subject: <input type="text" name="subject" id="subject"></label><br><br>
-	<label>Message: </label><br>
-	<textarea name="message" id="message" rows="4" col="40" style="width:50%">Enter your message here: </textarea><br><br>
+	</div>
+	<div id="message">
+		<textarea name="message" id="message" rows="10" col="40" placeholder="Message"></textarea><br><br>
+	</div>
+	<div class="submit">
+	<input type="submit" value="SUBMIT"  id="submit-button" title="Please ensure that your information is correct so that we can respond to your enquiry." onclick="successMessage()">
+	</div>
 	</fieldset>
 	</form>
-	<div id="submit-button">
-	<input type="submit" value="Send"> 
+	</div>
+
 	</div>
 </div>
-	</div>
-</div>
+
+<script>
+
+function successMessage() {
+	alert("Succressfully submitted! THANK YOU!");
+}
+</script>
 </body>
 </html>

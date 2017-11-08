@@ -90,15 +90,15 @@
 	.shopping-cart {
 		display: table;
 		float: right;
-		margin-right: 27%;
+		margin-right: 15%;
 		box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.10);
 		border-radius: 10px;
 
 	}
 	
 	.checkout {
-		margin-top: 31%;
-		margin-bottom: 3%;
+		margin-top: 43%;
+		margin-bottom: 10%;
 		
 	}
 	.checkout button { 
@@ -112,7 +112,8 @@
 		font-size: 18px;
 		letter-spacing: 3px;
 		border-color: #BFE9FC; 
-		box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.10)
+		box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.10);
+		cursor: pointer;
 	}
 
 </style>
@@ -163,35 +164,35 @@
 		</tr>
 		</thead>
 		<tr id="row1">
-			<td class="delete"><button type="button" onclick="dltRow('row1')">delete</button></td>
+			<td class="delete"><button type="button" onclick="dltRow('row1')" title="delete">delete</button></td>
 			<td class="product-img"><img src="img/MU.jpg" alt=""></td>
 			<td class="item">Manchester United Jersey<br><span class="size">M</span></td>
 			<td class="quantity">
-				<button type="button" onclick="plus()">+</button>
+				<button type="button" onclick="plus()" title="plus">+</button>
 				<input type="text" min="1" id="qty" value="1" onchange="quantity('row1')">
-				<button type="button" onclick="minus()">-</button>
+				<button type="button" onclick="minus()" title="minus">-</button>
 			</td>
 			<td class="item-price"><label>RM </label><input type="text" value="80.00" onchange="totalPrice('row1')"></td>
 		</tr>
 		<tr id="row2">
-			<td class="delete"><button type="button" onclick="dltRow('row2')">delete</button></td>
+			<td class="delete"><button type="button" onclick="dltRow('row2')" title="delete">delete</button></td>
 			<td class="product-img"><img src="img/FS5.jpg" alt=""></td>
 			<td class="item">dSports King<br><span class="size">uk9</span></td>
 			<td class="quantity">
-				<button type="button" onclick="plus()">+</button>
+				<button type="button" onclick="plus()" title="plus">+</button>
 				<input type="text" min="1" id="qty" value="1" onchange="quantity('row2')">
-				<button type="button" onclick="minus()">-</button>
+				<button type="button" onclick="minus()" title="minus">-</button>
 			</td>
 			<td class="item-price"><label>RM </label><input type="text" value="371.76" onchange="totalPrice('row2')"></td>
 		</tr>
 		<tr id="row3">
-			<td class="delete"><button type="button" onclick="dltRow('row3')">delete</button></td>
+			<td class="delete"><button type="button" onclick="dltRow('row3')" title="delete">delete</button></td>
 			<td class="product-img"><img src="img/keepinggloves.jpg" alt=""></td>
 			<td class="item">dSports Keeping Gloves<br><span class="size">OSFM</span></td>
 			<td class="quantity">
-				<button type="button" onclick="plus()">+</button>
+				<button type="button" onclick="plus()" title="plus">+</button>
 				<input type="text" min="1" id="qty" value="1" onchange="quantity('row3')">
-				<button type="button" onclick="minus()">-</button>
+				<button type="button" onclick="minus()" title="minus">-</button>
 			</td>
 			<td class="item-price"><label>RM </label><input type="text" id="price" value="50.00"  onchange="totalPrice('row3')"></td>
 		</tr>
@@ -212,13 +213,11 @@
 
 function dltRow(y) {
         document.getElementById(y).style.display = 'none';
-
 }
 
-function plus() {
+function plus(y) {
 	var z = parseInt(x.value) + 1;
 	document.getElementById('qty').value = z;
-	return z;
 }
 
 function minus() {
@@ -226,25 +225,27 @@ if (x.value > 1) {
 	var z = parseInt(x.value) - 1;
 		document.getElementById('qty').value = z;
 	}
-	return z;
 }
 
 function totalPrice(y) {
-	var p = document.getElementById('price').value;
-	plus();
-	minus();
+ var a = document.getElementById('price');
+ 
+	a.value = x.value * a.value;
 	
-	document.getElementById('price').value = p * z;
+	return a;
 }
 
-
+function calculateTotal(y) {
+	totalPrice(y);
+	document.getElementById('total').value = a;
+}
 		
 	</script>
 	
 	
 </div>
 	<div class="checkout">
-	<button onclick="javascript: window.location='deliveryForm.html'">CHECKOUT</button>
+	<button onclick="javascript: window.location='deliveryForm.html'" title="Are you sure?">CHECKOUT</button>
 	</div>
 </div>
 </div>
