@@ -239,15 +239,16 @@ tr {
 
 .shopping-cart {
 	display: table;
+	position: relative;
 	float: right;
-	margin-right: 15%;
+	margin: 3% 17% 0 3%;
 	box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.10);
 	border-radius: 10px;
 }
 
 .checkout {
-	margin-top: 43%;
-	margin-bottom: 10%;
+	margin-top: 48%;
+	margin-bottom: 7%;
 }
 
 .checkout button { 
@@ -273,6 +274,7 @@ tr {
 	background-color: rgba(47, 201, 252, 0.07);
 	border-radius: 20px;
 	margin-bottom: 3%;
+	position: relative;
 }
 
 #page {
@@ -294,19 +296,19 @@ tr {
 	font-family: 'Times New Roman', sans-serif;
 	font-size: 15px;
 	height: 40px;
-	width: 70%;
+	width: 68%;
 }
 
 
-# delivery-form .half {
+#delivery-form .half {
 	width: 48%;
 }
 
 #delivery-form .right {
 	float: right;
 	text-align: right;
-	padding-right: 5%;
-	width: 47%;
+	padding-right: 4%;
+	width: 48%;
 }
 
 #delivery-form .left {
