@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/dropdown.css" />
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
+	
 </head>
 <body>
 
@@ -65,15 +65,15 @@
 	</div>
 	<br><br>
 	<div id="contact-form">
-	<form method ="get" action="index.html">
+	<form method ="get" action="index.html" onsubmit="alert('Succressfully submitted! THANK YOU!')">
 	<fieldset>
 	<legend align="center" class="form-title">CONTACT CUSTOMER SERVICE</legend>
 	
 	<div class="half left">
-	<input type="text" name="name" id="name" placeholder="First Name"><br>
-	<input type="text" name="email" id="email" placeholder="Email"><br>
+	<input type="text" name="name" id="name" placeholder="First Name" required="" oninvalid="this.setCustomValidity('This field cant be blank!')" oninput="setCustomValidity('')"><br>
+	<input id="email" oninvalid="InvalidMsg(this);" name="email" oninput="InvalidMsg(this);" type="email" placeholder="Email" required="required"><br>
 
-	<label>Contact Preferences: &nbsp </label><select size="1" name="preference" id="preference">
+	<label>Contact Preferences: &nbsp </label><select size="1" name="preference" id="preference" required>
 	<option value="" disabled selected hidden>--Contact Preference--</option>
 	<option>I prefer to be contacted through phone calls.</option>
 	<option>I prefer to be contacted through text.</option>
@@ -83,9 +83,9 @@
 	 </div>
 	 
   <div class="half right">
-	<input type="text" name="name" id="name" placeholder="Last Name"><br>
-	<input type="text" name="phone" id="phone" placeholder="Phone"><br>
-	<label>Type of Query: &nbsp </label><select size="1" name="querytype" id="querytype">
+	<input type="text" name="name" id="name" placeholder="Last Name" required="" oninvalid="this.setCustomValidity('This field cant be blank!')" oninput="setCustomValidity('')"><br>
+	<input type="text" name="phone" id="phone" placeholder="Phone" required="" oninvalid="this.setCustomValidity('This field cant be blank!')" oninput="setCustomValidity('')"><br>
+	<label>Type of Query: &nbsp </label><select size="1" name="querytype" id="querytype" required>
 	<option value="" disabled selected hidden>--What's Your Concern?--</option>
 	<option>How to Shop</option>
 	<option>Order Related Concerns</option>
@@ -96,10 +96,10 @@
 	</select><br><br>
 	</div>
 	<div id="message">
-		<textarea name="message" id="message" rows="10" col="40" placeholder="Message"></textarea><br><br>
+		<textarea name="message" id="message" rows="10" col="40" placeholder="Message" required="" oninvalid="this.setCustomValidity('This field cant be blank!')" oninput="setCustomValidity('')"></textarea><br><br>
 	</div>
 	<div class="submit">
-	<input type="submit" value="SUBMIT"  id="submit-button" title="Please ensure that your information is correct so that we can respond to your enquiry." onclick="successMessage()">
+	<input type="submit" value="SUBMIT"  id="submit-button" title="Please ensure that your information is correct so that we can respond to your enquiry.">
 	</div>
 	</fieldset>
 	</form>
@@ -109,10 +109,20 @@
 </div>
 
 <script>
-
-function successMessage() {
-	alert("Succressfully submitted! THANK YOU!");
+  function InvalidMsg(textbox) {
+    
+    if (textbox.value == '') {
+        textbox.setCustomValidity('Required email address');
+    }
+    else if(textbox.validity.typeMismatch){
+        textbox.setCustomValidity('please enter a valid email address');
+    }
+    else {
+        textbox.setCustomValidity('');
+    }
+    return true;
 }
 </script>
+
 </body>
 </html>
