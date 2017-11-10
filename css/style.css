@@ -295,7 +295,7 @@ tr {
 	border-radius: 0px 8px 8px 0px;
 	font-family: 'Times New Roman', sans-serif;
 	font-size: 15px;
-	height: 40px;
+	height: 32px;
 	width: 68%;
 }
 
@@ -325,7 +325,7 @@ tr {
 	border-radius: 0px 8px 8px 0px;
 	font-family: 'Times New Roman', sans-serif;
 	font-size: 15px;
-	height: 40px;
+	height: 32px;
 }
 
 
@@ -335,7 +335,7 @@ tr {
 	padding: .3em;
 	font-family: 'Times New Roman', sans-serif;
 	font-size: 15px;
-	height: 40px;
+	height: 32px;
 	width: 31.5%;
 	margin: 0 2% 0 5%;
 	border-radius: 8px;
@@ -408,7 +408,7 @@ tr {
 
 #delivery-form img {
 	width: 20px;
-	height: 40px;
+	height: 41px;
 	vertical-align: middle;
 	position: relative;
 	bottom: 1px;
