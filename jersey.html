@@ -3,8 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Football Jerseys</title>
+	
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/dropdown.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/modal.css" />
+	
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
@@ -39,6 +44,13 @@
   <li><a href="cart.html" class="navcss">Cart</a></li>
 </ul>
 </div>
+<div id="myModal" class="modal">
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
 
 
 <div class="allItems">
@@ -47,7 +59,9 @@
 
 
 <h1 class="itemTitle">Football Jerseys</h1>
-<div class="items"><img src="img/RM.jpg" alt="Real Madrid Jersey" width="320px" height="300px">
+<div class="items">
+<img class = "myImg" src="img/RM.jpg" alt="Real Madrid Jersey" width="320px" height="300px">
+
 <h4>Real Madrid Jersey</h4>
 <h4>RM 80.00</h4>
       <b>Select Size:</b> <select size ="1" name="jumpmenu" id="jumpmenu">
@@ -58,7 +72,8 @@
 <option>XL</option>
 </select>
 </div>
-<div class="items"><img src="img/JUV.jpg" alt="Juventus Jersey" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/JUV.jpg" alt="Juventus Jersey" width="320px" height="300px">
+
 <h4>Juventus Jersey</h4>
 <h4>RM 80.00</h4>
       <b>Select Size:</b> <select size ="1" name="jumpmenu" id="jumpmenu">
@@ -69,7 +84,7 @@
 <option>XL</option>
 </select>
 </div>
-<div class="items"><img src="img/MU.jpg" alt="Manchester United Jersey" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/MU.jpg" alt="Manchester United Jersey" width="320px" height="300px">
 <h4>Manchester United Jersey</h4>
 <h4>RM 80.00</h4>
       <b>Select Size:</b> <select size ="1" name="jumpmenu" id="jumpmenu">
@@ -83,7 +98,7 @@
 
  
  
-<div class="items"><img src="img/PSG.jpg" alt="PSG Jersey" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/PSG.jpg" alt="PSG Jersey" width="320px" height="300px">
 <h4>PSG Jersey</h4>
 <h4>RM 80.00</h4>
 
@@ -95,7 +110,7 @@
 <option>XL</option>
 </select>
 </div>
-<div class="items"><img src="img/MC.jpg" alt="Manchester City Jersey" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/MC.jpg" alt="Manchester City Jersey" width="320px" height="300px">
 <h4>Manchester City Jersey</h4>
 <h4>RM 80.00</h4>
 
@@ -107,7 +122,7 @@
 <option>XL</option>
 </select>
 </div>
-<div class="items"><img src="img/TOT.jpg" alt="Tottenham Jersey" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/TOT.jpg" alt="Tottenham Jersey" width="320px" height="300px">
 <h4>Tottenham Jersey</h4>
 <h4>RM 80.00</h4>
 
@@ -122,7 +137,7 @@
 
  
  
-<div class="items"><img src="img/LIV.jpg" alt="Liverpool Jersey" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/LIV.jpg" alt="Liverpool Jersey" width="320px" height="300px">
 <h4>Liverpool Jersey</h4>
 <h4>RM 80.00</h4>
 
@@ -134,7 +149,7 @@
 <option>XL</option>
 </select>
 </div>
-<div class="items"><img src="img/CEL.jpg" alt="Celtic Jersey" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/CEL.jpg" alt="Celtic Jersey" width="320px" height="300px">
 <h4>Celtic Jersey</h4>
 <h4>RM 80.00</h4>
 
@@ -146,7 +161,7 @@
 <option>XL</option>
 </select>
 </div>
-<div class="items"><img src="img/ARS.jpg" alt="Arsenal Jersey" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/ARS.jpg" alt="Arsenal Jersey" width="320px" height="300px">
 <h4>Arsenal Jersey</h4>
 <h4>RM 80.00</h4>
 
@@ -160,6 +175,25 @@
 </div>
 </div>
 </div>
+
+<script>// Get the modal
+var modal = document.getElementById('myModal');
+
+var img = $('.myImg');
+var modalImg = $("#img01");
+var captionText = document.getElementById("caption");
+$('.myImg').click(function(){
+    modal.style.display = "block";
+    var newSrc = this.src;
+    modalImg.attr('src', newSrc);
+    captionText.innerHTML = this.alt;
+});
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
 
 </body>
 </html>

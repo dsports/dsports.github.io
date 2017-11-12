@@ -5,6 +5,10 @@
 	<title>Male Running Shoes</title>
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/dropdown.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/modal.css" />
+
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
@@ -40,13 +44,19 @@
 </ul>
 </div>
 
+<div id="myModal" class="modal">
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
 <div class="allItems">
 <img src="img/logo.png" alt="logo" id="logo" />
 
 <div class = "whitespace">
 
 <h1 class="itemTitle">Male Running Shoes</h1>
-<div class="items"><img src="img/MS1.jpg" alt="dSports Roadie" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/MS1.jpg" alt="dSports Roadie" width="320px" height="300px">
 <h4>dSports Roadie</h4>
 <h4>RM 144.80</h4>
 <b>Select Size:</b> <Select Size:="1" name="jumpmenu" id="jumpmenu">
@@ -58,7 +68,7 @@
 <option>13</option>
 </select>
 </div>
-<div class="items"><img src="img/MS2.jpg" alt="dSports Styre" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/MS2.jpg" alt="dSports Styre" width="320px" height="300px">
 <h4>dSports Styre</h4>
 <h4>RM 233.90</h4>
 <b>Select Size:</b> <Select Size:="1" name="jumpmenu" id="jumpmenu">
@@ -69,7 +79,7 @@
 <option>13</option>
 </select>
 </div>
-<div class="items"><img src="img/MS3.jpg" alt="dSports Flex" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/MS3.jpg" alt="dSports Flex" width="320px" height="300px">
 <h4>dSports Flex</h4>
 <h4>RM 125.30</h4>
 <b>Select Size:</b> <Select Size:="1" name="jumpmenu" id="jumpmenu">
@@ -81,7 +91,7 @@
 </select>
 </div>
 
-<div class="items"><img src="img/MS4.jpg" alt="dSports Max" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/MS4.jpg" alt="dSports Max" width="320px" height="300px">
 <h4>dSports Max</h4>
 <h4>RM 228.58</h4>
 <b>Select Size:</b> <Select Size:="1" name="jumpmenu" id="jumpmenu">
@@ -92,7 +102,7 @@
 <option>13</option>
 </select>
 </div>
-<div class="items"><img src="img/MS5.jpg" alt="dSports Pro" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/MS5.jpg" alt="dSports Pro" width="320px" height="300px">
 <h4>dSports Pro</h4>
 <h4>RM 125.30</h4>
 <b>Select Size:</b> <Select Size:="1" name="jumpmenu" id="jumpmenu">
@@ -103,7 +113,7 @@
 <option>13</option>
 </select>
 </div>
-<div class="items"><img src="img/MS6.jpg" alt="dSports Power" width="320px" height="300px">
+<div class="items"><img class="myImg" src="img/MS6.jpg" alt="dSports Power" width="320px" height="300px">
 <h4>dSports Power</h4>
 <h4>RM 186.56</h4>
 <b>Select Size:</b> <Select Size:="1" name="jumpmenu" id="jumpmenu">
@@ -117,5 +127,23 @@
 </div>
 </div>
 </div>
+<script>// Get the modal
+var modal = document.getElementById('myModal');
+
+var img = $('.myImg');
+var modalImg = $("#img01");
+var captionText = document.getElementById("caption");
+$('.myImg').click(function(){
+    modal.style.display = "block";
+    var newSrc = this.src;
+    modalImg.attr('src', newSrc);
+    captionText.innerHTML = this.alt;
+});
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
 </body>
 <html>
